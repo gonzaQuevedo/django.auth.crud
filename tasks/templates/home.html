@@ -1,27 +1,47 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
 
-<div class="container">
-  <h1>Principal</h1>
-  <p>Bienvenido a TaskMaster
-    Gestiona tus tareas de manera eficiente y sin esfuerzo con TaskMaster, tu compañero confiable para la administración de tareas. ¡Haz que cada día sea más productivo!
-    
-    Características Destacadas
-    Organización Intuitiva: Crea listas de tareas, asigna prioridades y organiza tus actividades de la manera que más te convenga.
-    
-    Recordatorios Personalizados: Configura recordatorios para asegurarte de que nunca se te olvide una tarea importante.
-    
-    Colaboración en Equipo: Trabaja en proyectos conjuntos asignando tareas a tus colegas y mantén a todos en la misma página.
-    
-    Seguimiento de Progreso: Visualiza tu progreso con gráficos e informes detallados. Celebra tus éxitos y mejora en las áreas que lo necesitan.
-    
-    Por Qué Elegir TaskMaster
-    Simplicidad en la Gestión: Una interfaz fácil de usar que pone el control en tus manos. Menos tiempo navegando, más tiempo haciendo.
-    
-    Accesible en Todas Partes: Disfruta de la flexibilidad con acceso desde cualquier dispositivo. Mantén tu lista de tareas sincronizada, ya sea en tu escritorio o en movimiento.
-    
-    Seguridad y Confidencialidad: Tus datos son importantes. TaskMaster utiliza medidas de seguridad robustas para proteger tu información.
-    
-    ¡Inicia sesión ahora y lleva la administración de tareas al siguiente nivel con TaskMaster! </p>
-</div>
+{% block content %}
 
+    <main class="container py-5">
+        
+        <section class="card card-body">
+            <h1 class="display-5 text-center"> <h1>Principal</h1>
+            <p><strong>Bienvenido a TaskMaster</strong></p>
+            <p>
+              Gestiona tus tareas de manera eficiente y sin esfuerzo con TaskMaster, tu compañero confiable para la administración de tareas. ¡Haz que cada día sea más productivo!</p>
+            </p>
+            <p><strong>Características Destacadas</strong></p>
+            <ul>
+              <li>Organización Intuitiva: Crea listas de tareas, asigna prioridades y organiza tus actividades de la manera que más te convenga.</li>
+              
+              <li>Recordatorios Personalizados: Configura recordatorios para asegurarte de que nunca se te olvide una tarea importante.</li>
+              
+              <li>Colaboración en Equipo: Trabaja en proyectos conjuntos asignando tareas a tus colegas y mantén a todos en la misma página.</li>
+              
+              <li>Seguimiento de Progreso: Visualiza tu progreso con gráficos e informes detallados. Celebra tus éxitos y mejora en las áreas que lo necesitan.</li>
+            </ul>
+              <p><strong>Por Qué Elegir TaskMaster</strong></p>
+            <ul>
+              <li>
+                Simplicidad en la Gestión: Una interfaz fácil de usar que pone el control en tus manos. Menos tiempo navegando, más tiempo haciendo.
+              </li>  
+              <li>
+                Accesible en Todas Partes: Disfruta de la flexibilidad con acceso desde cualquier dispositivo. Mantén tu lista de tareas sincronizada, ya sea en tu escritorio o en movimiento.
+              </li>
+              <li>
+                Seguridad y Confidencialidad: Tus datos son importantes. TaskMaster utiliza medidas de seguridad robustas para proteger tu información.
+              </li>
+              <strong>
+                ¡Inicia sesión ahora y lleva la administración de tareas al siguiente nivel con TaskMaster!
+              </strong>
+            </ul>
+            <div class="text-center">
+                <a class="btn btn-primary" href="/signup">Iniciar sesión</a><!-- pone el boton color azul-->
+                
+                <a class="btn btn-primary" href="/signin">Registrarse</a><!-- pone el boton color oscuro-->
+            </div>
+        </section>
+        
+    </main>
+      
 {% endblock %}

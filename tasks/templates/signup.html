@@ -1,3 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <main class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 mt-5"><!--col: Indica que es una columna.
+                md-4: Indica que la columna ocupará 4 de las 12 columnas disponibles y (md)=dispositivos medianos , offset: Indica un desplazamiento, mt-5 es el margen superior-->
+                
+                <form method="POST" class="card card-body "><!-- el metodo post lo envía de forma oculta y no en la URL, card card-body lo hace con forma de tarjeta-->
+                    <h1 class="text-center">Signup</h1>
+                    {{error}}<!-- recibe el parametro error de views de la funcion def signup-->
+                    {% csrf_token %}
+                    <!-- {{ form }} -->
+                    <div class="mb-3">
+                        <label for="username">Username:</label>
+                        <input type="text" name="username" id="username"  class="form-control" placeholder="Escribe tu nombe de usuario" ><!-- La clase form-control en Bootstrap se utiliza para darle estilo a los elementos de formulario, como cajas de texto, áreas de texto -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="password1">Password:</label>
+                        <input type="password" name="password1" id="password1"  class="form-control" placeholder="Escribe tu Password" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="password2">Password:</label>
+                        <input type="password" name="password2" id="password2"  class="form-control" placeholder="Confirmar tu Password" >
+                    </div>
+                    <button class="btn btn-primary">
+                        Signup
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+        <!--<div class="row"> tienes una fila con tres columnas, cada una ocupando 4 de las 12 columnas disponibles en dispositivos medianos
+            <div class="col-md-4">Columna 1</div>
+            <div class="col-md-4">Columna 2</div>
+            <div class="col-md-4">Columna 3</div>
+        </div>-->    
+    
+    
+{% endblock %}
+<!--
 {% extends 'base.html' %} {% block content %}
 
 <div class="container">
@@ -10,4 +51,4 @@
     <button class="btn btn-primary">Signup</button>
   </form>
 </div>
-{% endblock %}
+{% endblock %} -->
